@@ -27,6 +27,16 @@ public class GameRepo {
         return result;
     }
 
+    public char[] getTilt(int column) {
+        char[] result = new char[3];
+        int index = column;
+        for (int i = 0; i < result.length; i++) {
+            result[i] = column == 1 ? ' ' : gameData[i][index];
+            index = index == 3 ? --index : ++index;
+        }
+        return result;
+    }
+
     public boolean setPieces(int row, int column, char assigner) {
         if (!itsError(row, column)) {
             this.gameData[row][column] = assigner;

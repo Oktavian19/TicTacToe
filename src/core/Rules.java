@@ -9,7 +9,7 @@ public class Rules {
 
     public boolean checkingWin() {
         for (int i = 0; i < 3; i++) {
-            if (isEquals(data.getRow(i)) || isEquals(data.getColumn(i))) {
+            if (isEquals(data.getRow(i)) || isEquals(data.getColumn(i)) || isEquals(data.getTilt(i))) {
                 return true;
             }
         }
